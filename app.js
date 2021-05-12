@@ -18,7 +18,7 @@ export default (express, bodyParser, fs, crypto, http) => {
     .get('/login/', (req, res) => res.send('anavitbel'))   
     .get('/code/', (req, res) => fs.createReadStream(import.meta.url.substring(7)).pipe(res))
     .get('/sha1/:input/', (req, res) => res.send(crypto.createHash('sha1').update(req.params.input).digest('hex')))
-    .all('/*', r => r.res.send('anavitbel'));
+    .all('/*', r => r.res.send('hitorrin'));
 
     return app;
 }
